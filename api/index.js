@@ -16,7 +16,9 @@ app.use(allowCrossDomain);
 
 
 app.use(express.json());
+app.get("/",(req,res)=>{
+    res.send("hello world")
+})
 app.use("/api/user", router);
-
 
 app.listen(port, conn(port))
